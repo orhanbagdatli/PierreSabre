@@ -4,11 +4,11 @@ public class Humain {
 	
 	private String nom ;
 	private String boissonFavorite ;
-	private int argent ;
+	protected int argent ;
 	
 	
 	public Humain(String nom, String boissonFavorite, int argent) {
-		// TODO Auto-generated constructor stub
+		
 		this.nom = nom ;
 		this.boissonFavorite = boissonFavorite ;
 		this.argent = argent;
@@ -54,7 +54,7 @@ public class Humain {
 	public void acheter(String bien, int prix ) {
 		if (argent >= prix) {
 			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir une " + bien +" à " + prix + " sous");
-			perdreArgent(prix); ;	
+			perdreArgent(prix); 	
 		}
 		
 		else {
